@@ -15,7 +15,7 @@ export default class Header extends Component {
             {/* Zamieszczam logo duszpasterstwa jako "dom" */}
                 <div className="logo">
                     <a href="#">
-                        <img src="../img/wawrzynyprzezroczystetlo.svg" alt="Wawrzyny"/>
+                        <img src="/img/wawrzynyprzezroczystetlo.svg" alt="Wawrzyny"/>
                         {/* style="width:300px; height:100px; object-fit: cover" */}
                     </a>
                 </div>
