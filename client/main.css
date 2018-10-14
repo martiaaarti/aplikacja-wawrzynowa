@@ -16,7 +16,7 @@ body {
   font-size: 14px;
 }
  
-.container {
+.main-container {
   margin: 0 auto;
   min-height: 100%;
 }
@@ -52,7 +52,7 @@ body {
 
 /* Footer style */
 
-.mainFooter {
+.main-footer {
   width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
