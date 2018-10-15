@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 
 
-// MainPage component - represents a main content of the app
 export default class Footer extends Component {
     constructor(props) {
         super(props);
@@ -10,11 +9,10 @@ export default class Footer extends Component {
 
     render() {
         return (
-            <div className="mainFooter">
+            <div className="main-footer">
                 <div className="ministry-name">
                     <h2>Duszpasterstwo Akademickie Wawrzyny</h2>
                 </div>
-                {/* Ikony Facebook i Youtube do odpowiednich stron Wawrzynowych: nie mogę podłączyć ikon do linków */}
                 <div className="social">
                     <ul>
                         <li>

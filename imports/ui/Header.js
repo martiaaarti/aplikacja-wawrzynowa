@@ -11,25 +11,23 @@ export default class Header extends Component {
 
     render() {
         return (
-            <div className="header">
-            {/* Zamieszczam logo duszpasterstwa jako "dom" */}
-                <div className="logo">
-                    <a href="#">
-                        <img src="../img/wawrzynyprzezroczystetlo.svg" alt="Wawrzyny"/>
-                        {/* style="width:300px; height:100px; object-fit: cover" */}
-                    </a>
-                </div>
-                <div className="go-right">
-                    <div className="title">
-                        <h1>Wawrzyn</h1>
+                    <div className="header">
+                        <div className="logo">
+                            <a href="#">
+                                <img  src="/img/backgroundMinistryLogo.svg"  alt="Wawrzyny"/>
+                            </a>
+                        </div>
+                        <div className="go-right">
+                            <div className="title">
+                                <h1>Wawrzyn</h1>
+                            </div>
+                            <div className="settings-list">
+                                <a href='#' title= "setting">
+                                    <img className="" src=""  alt="Ustawienia"/>
+                                </a>                        
+                            </div>
+                        </div>                
                     </div>
-
-                    {/* Zamieszczam ikone ustawien */}
-                    <div className="setting-list">
-                        <a href='#' title= "setting"></a>                        
-                    </div>
-                </div>                
-            </div>
-        )
-    }
-}
+                )
+            }
+        }

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'; //sprawdzić czy jest potrzebna
+import ReactDOM from 'react-dom'; 
  
 import Header from './Header.js';
 import MainPage from './MainPage.js';
 import Footer from './Footer.js';
  
-// App component - represents the whole app
 
 export default class App extends Component {
     constructor(props) {
@@ -14,7 +13,7 @@ export default class App extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="main-container">
                 <Header/>            
                 <MainPage/>
                 <Footer/>
@@ -22,4 +21,3 @@ export default class App extends Component {
         )
     }
 }
-// renderuje to co mam w return()
