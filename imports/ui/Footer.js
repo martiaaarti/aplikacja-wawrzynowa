@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Container, Row, Col } from 'reactstrap';
 
 
 
@@ -10,19 +11,13 @@ export default class Footer extends Component {
     render() {
         return (
             <div className="main-footer">
-                <div className="ministry-name">
-                    <h2>Duszpasterstwo Akademickie Wawrzyny</h2>
-                </div>
-                <div className="social">
-                    <ul>
-                        <li>
-                            <a href="https://www.facebook.com/DAWawrzyny/" title="facebook"></a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/user/DAWawrzyny" title="youtube"></a>
-                        </li>
-                    </ul>
-                </div>
+                <Container>
+                    <Row>
+                        <Col sm="12" md="12" lg="12">
+                            <p className="align-self-center">&copy; 2018. Duszpasterstwo Akademickie Wawrzyny</p>
+                        </Col>
+                    </Row>
+                </Container>               
             </div>
         )
     }
