@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
@@ -14,7 +15,10 @@ export default class Footer extends Component {
                 <Container>
                     <Row>
                         <Col sm="12" md="12" lg="12">
-                            <p className="align-self-center">&copy; 2018. Duszpasterstwo Akademickie Wawrzyny</p>
+                            <p className="align-self-center">&copy; 2018. Duszpasterstwo Akademickie Wawrzyny
+                            <FontAwesomeIcon icon={['fab', 'facebook']} />
+                            <FontAwesomeIcon icon={['fab', 'youtube']} />                            
+                            </p>
                         </Col>
                     </Row>
                 </Container>               

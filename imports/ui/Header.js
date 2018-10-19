@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {
-     Container, 
-    Row, 
-    Col, 
+    Container,
+    Row,
+    Col,
     Collapse,
     Navbar,
     NavbarToggler,
@@ -13,7 +13,9 @@ import {
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    DropdownItem
+} from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
@@ -25,75 +27,77 @@ export default class Header extends Component {
 
         this.toggle = this.toggle.bind(this);
         this.state = {
-          isOpen: false
+            isOpen: false
         };
     }
 
     toggle() {
         this.setState({
-          isOpen: !this.state.isOpen
+            isOpen: !this.state.isOpen
         });
-      }
+    }
 
     render() {
         return (
             <Container>
                 <Row>
-                <Col>
-                    <div>
-                        <Navbar color="light" light expand="md">
-                            <NavbarBrand href="/">Wawrzyn
+                    <Col>
+                        <div>
+                            <Navbar color="light" light expand="md">
+                                <NavbarBrand href="/">Wawrzyn
                             </NavbarBrand>
-                            <NavbarToggler onClick={this.toggle} />
-                            <Collapse isOpen={this.state.isOpen} navbar>
-                                <Nav className="ml-auto" navbar>
-                                <NavItem>
-                                    <NavLink href="/components/">Zaloguj</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink href="#">Zarejestuj się</NavLink>
-                                </NavItem>
-                                <UncontrolledDropdown nav inNavbar>
-                                    <DropdownToggle nav caret>
-                                    Ustawienia
-                                    </DropdownToggle>
-                                    <DropdownMenu right>
-                                    <DropdownItem>
-                                        Spotkania Ministerstw
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Mój Profil
-                                    </DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>
-                                        Wyloguj
-                                    </DropdownItem>
-                                    </DropdownMenu>
-                                </UncontrolledDropdown>
-                                </Nav>
-                            </Collapse>
-                        </Navbar>
-                    </div>
-                </Col>
+                                <NavbarToggler onClick={this.toggle} />
+                                <Collapse isOpen={this.state.isOpen} navbar>
+                                    <Nav className="ml-auto" navbar>
+                                        <NavItem>
+                                            <NavLink href="/components/">Zaloguj</NavLink>
+                                        </NavItem>
+                                        <NavItem>
+                                            <NavLink href="#">Zarejestuj się</NavLink>
+                                        </NavItem>
+                                        <UncontrolledDropdown nav inNavbar>
+                                            <DropdownToggle nav >
+                                                <div>
+                                                    <FontAwesomeIcon icon="cog" />
+                                                </div>
+                                            </DropdownToggle>
+                                            <DropdownMenu right>
+                                                <DropdownItem>
+                                                    Spotkania Ministerstw
+                                                </DropdownItem>
+                                                <DropdownItem>
+                                                    Mój Profil
+                                                </DropdownItem>
+                                                <DropdownItem divider />
+                                                <DropdownItem>
+                                                    Wyloguj
+                                                 </DropdownItem>
+                                            </DropdownMenu>
+                                        </UncontrolledDropdown>
+                                    </Nav>
+                                </Collapse>
+                            </Navbar>
+                        </div>
+                    </Col>
                 </Row>
             </Container>
-                    // <div className="header">
-                    //     <div className="logo">
-                    //         <a href="#">
-                    //             <img  src="/img/backgroundMinistryLogo.svg"  alt="Wawrzyny"/>
-                    //         </a>
-                    //     </div>
-                    //     <div className="go-right">
-                    //         <div className="title">
-                    //             <h1>Wawrzyn</h1>
-                    //         </div>
-                    //         <div className="settings-list">
-                    //             <a href='#' title= "setting">
-                    //                 <img className="" src=""  alt="Ustawienia"/>
-                    //             </a>                        
-                    //         </div>
-                    //     </div>                
-                    // </div>
-                )
-            }
-        }
+            // <div className="header">
+            //     <div className="logo">
+            //         <a href="#">
+            //             <img  src="/img/backgroundMinistryLogo.svg"  alt="Wawrzyny"/>
+            //         </a>
+            //     </div>
+            //     <div className="go-right">
+            //         <div className="title">
+            //             <h1>Wawrzyn</h1>
+            //         </div>
+            //         <div className="settings-list">
+            //             <a href='#' title= "setting">
+            //                 <img className="" src=""  alt="Ustawienia"/>
+            //             </a>                        
+            //         </div>
+            //     </div>                
+            // </div>
+        )
+    }
+}
