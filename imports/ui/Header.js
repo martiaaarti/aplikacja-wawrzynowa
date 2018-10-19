@@ -17,6 +17,11 @@ import {
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+const items = [
+    {src: '/img/backgroundMinistryLogo.svg',
+    altText: 'DA Wawrzyny',
+    caption: ''}
+];
 
 
 
@@ -44,8 +49,10 @@ export default class Header extends Component {
                     <Col>
                         <div>
                             <Navbar color="light" light expand="md">
-                                <NavbarBrand href="/">Wawrzyn
-                            </NavbarBrand>
+                                <NavbarBrand href="/">
+                                Wawrzyny
+                                {/* <img src={items.src} alt={items.altText} /> */}
+                                </NavbarBrand>
                                 <NavbarToggler onClick={this.toggle} />
                                 <Collapse isOpen={this.state.isOpen} navbar>
                                     <Nav className="ml-auto" navbar>
