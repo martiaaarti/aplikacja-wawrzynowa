@@ -28,6 +28,7 @@
     "testModule": "tests/main.js"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.4.1",
     "webpack": "^4.20.2"
   }
 }

@@ -17,11 +17,7 @@ import {
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const items = [
-    {src: '/img/backgroundMinistryLogo.svg',
-    altText: 'DA Wawrzyny',
-    caption: ''}
-];
+
 
 
 
@@ -44,14 +40,13 @@ export default class Header extends Component {
 
     render() {
         return (
-            <Container>
+            <Container className="main-header-size">
                 <Row>
                     <Col>
                         <div>
-                            <Navbar color="light" light expand="md">
+                            <Navbar  color="light" light expand="md">
                                 <NavbarBrand href="/">
-                                Wawrzyny
-                                {/* <img src={items.src} alt={items.altText} /> */}
+                                <img  src="/img/LogoWawrzyny.png"  alt="Wawrzyny"/>
                                 </NavbarBrand>
                                 <NavbarToggler onClick={this.toggle} />
                                 <Collapse isOpen={this.state.isOpen} navbar>
@@ -64,9 +59,7 @@ export default class Header extends Component {
                                         </NavItem>
                                         <UncontrolledDropdown nav inNavbar>
                                             <DropdownToggle nav >
-                                                <div>
                                                     <FontAwesomeIcon icon="cog" />
-                                                </div>
                                             </DropdownToggle>
                                             <DropdownMenu right>
                                                 <DropdownItem>
@@ -88,23 +81,6 @@ export default class Header extends Component {
                     </Col>
                 </Row>
             </Container>
-            // <div className="header">
-            //     <div className="logo">
-            //         <a href="#">
-            //             <img  src="/img/backgroundMinistryLogo.svg"  alt="Wawrzyny"/>
-            //         </a>
-            //     </div>
-            //     <div className="go-right">
-            //         <div className="title">
-            //             <h1>Wawrzyn</h1>
-            //         </div>
-            //         <div className="settings-list">
-            //             <a href='#' title= "setting">
-            //                 <img className="" src=""  alt="Ustawienia"/>
-            //             </a>                        
-            //         </div>
-            //     </div>                
-            // </div>
         )
     }
 }
