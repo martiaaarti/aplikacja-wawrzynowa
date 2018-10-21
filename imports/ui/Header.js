@@ -44,38 +44,40 @@ export default class Header extends Component {
                 <Row>
                     <Col>
                         <div>
-                            <Navbar  color="light" light expand="md">
-                                <NavbarBrand href="/">
-                                <img className="logo" src="/img/LogoWawrzyny.png"  alt="Wawrzyny"/>
-                                </NavbarBrand>
-                                <NavbarToggler onClick={this.toggle} />
-                                <Collapse isOpen={this.state.isOpen} navbar>
-                                    <Nav className="ml-auto" navbar>
-                                        <NavItem>
-                                            <NavLink href="/components/">Zaloguj</NavLink>
-                                        </NavItem>
-                                        <NavItem>
-                                            <NavLink href="#">Zarejestuj się</NavLink>
-                                        </NavItem>
-                                        <UncontrolledDropdown nav inNavbar>
-                                            <DropdownToggle nav >
+                            <Navbar color="light" light expand="md">
+                                <Container>
+                                    <NavbarBrand href="/">
+                                        <img className="logo" src="/img/LogoWawrzyny.png" alt="Wawrzyny" />
+                                    </NavbarBrand>
+                                    <NavbarToggler onClick={this.toggle} />
+                                    <Collapse isOpen={this.state.isOpen} navbar>
+                                        <Nav className="ml-auto" navbar>
+                                            <NavItem>
+                                                <NavLink href="/components/">Zaloguj</NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink href="#">Zarejestuj się</NavLink>
+                                            </NavItem>
+                                            <UncontrolledDropdown nav inNavbar>
+                                                <DropdownToggle nav >
                                                     <FontAwesomeIcon icon="cog" />
-                                            </DropdownToggle>
-                                            <DropdownMenu right>
-                                                <DropdownItem>
-                                                    Spotkania Ministerstw
+                                                </DropdownToggle>
+                                                <DropdownMenu right>
+                                                    <DropdownItem>
+                                                        Spotkania Ministerstw
                                                 </DropdownItem>
-                                                <DropdownItem>
-                                                    Mój Profil
+                                                    <DropdownItem>
+                                                        Mój Profil
                                                 </DropdownItem>
-                                                <DropdownItem divider />
-                                                <DropdownItem>
-                                                    Wyloguj
+                                                    <DropdownItem divider />
+                                                    <DropdownItem>
+                                                        Wyloguj
                                                  </DropdownItem>
-                                            </DropdownMenu>
-                                        </UncontrolledDropdown>
-                                    </Nav>
-                                </Collapse>
+                                                </DropdownMenu>
+                                            </UncontrolledDropdown>
+                                        </Nav>
+                                    </Collapse>
+                                </Container>
                             </Navbar>
                         </div>
                     </Col>
