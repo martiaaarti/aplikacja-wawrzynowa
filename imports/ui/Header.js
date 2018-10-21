@@ -40,13 +40,14 @@ export default class Header extends Component {
 
     render() {
         return (
-            <Container className="main-header-size">
+            <div className="main-header">
+            <Container className="header-container">
                 <Row>
                     <Col>
                         <div>
                             <Navbar  color="light" light expand="md">
                                 <NavbarBrand href="/">
-                                <img  src="/img/LogoWawrzyny.png"  alt="Wawrzyny"/>
+                                <img className="logo" src="/img/LogoWawrzyny.png"  alt="Wawrzyny"/>
                                 </NavbarBrand>
                                 <NavbarToggler onClick={this.toggle} />
                                 <Collapse isOpen={this.state.isOpen} navbar>
@@ -81,6 +82,7 @@ export default class Header extends Component {
                     </Col>
                 </Row>
             </Container>
+            </div>
         )
     }
 }
