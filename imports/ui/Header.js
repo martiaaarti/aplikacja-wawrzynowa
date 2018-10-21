@@ -41,7 +41,6 @@ export default class Header extends Component {
     render() {
         return (
             <div className="main-header">
-            <Container className="header-container">
                 <Row>
                     <Col>
                         <div>
@@ -81,7 +80,6 @@ export default class Header extends Component {
                         </div>
                     </Col>
                 </Row>
-            </Container>
             </div>
         )
     }
