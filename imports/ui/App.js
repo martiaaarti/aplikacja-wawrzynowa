@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'; 
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faCog } from '@fortawesome/free-solid-svg-icons';
 
 import Header from './Header.js';
 import MainPage from './MainPage.js';
 import Footer from './Footer.js';
+import {setupFontAwesome} from './FontAwesomeSetup.js';
 
-library.add(faFacebook, faYoutube, faCog)
+setupFontAwesome();
 
 export default class App extends Component {
     constructor(props) {
