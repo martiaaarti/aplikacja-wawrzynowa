@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'; 
- 
+
+
 import Header from './Header.js';
 import MainPage from './MainPage.js';
 import Footer from './Footer.js';
- 
+import {setupFontAwesome} from './fontAwesomeSetup.js';
+
+setupFontAwesome();
 
 export default class App extends Component {
     constructor(props) {
