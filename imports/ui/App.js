@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import Header from './Header.js';
 import MainPage from './MainPage.js';
 import Footer from './Footer.js';
-import {setupFontAwesome} from './FontAwesomeSetup.js';
+import {setupFontAwesome} from './fontAwesomeSetup';
 
 setupFontAwesome();
 
