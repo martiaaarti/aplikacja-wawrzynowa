@@ -6,6 +6,6 @@ import { faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 
 
-export const setupFontAwesome = () => {[
+export const setupFontAwesome = () => {
 library.add(faFacebook, faYoutube, faCog)  
-]};
+};
