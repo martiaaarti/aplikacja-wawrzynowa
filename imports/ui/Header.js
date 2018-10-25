@@ -65,14 +65,14 @@ export default class Header extends Component {
                                                 <DropdownMenu right>
                                                     <DropdownItem>
                                                         Spotkania Ministerstw
-                                                </DropdownItem>
+                                                    </DropdownItem>
                                                     <DropdownItem>
                                                         Mój Profil
-                                                </DropdownItem>
+                                                    </DropdownItem>
                                                     <DropdownItem divider />
                                                     <DropdownItem>
                                                         Wyloguj
-                                                 </DropdownItem>
+                                                    </DropdownItem>
                                                 </DropdownMenu>
                                             </UncontrolledDropdown>
                                         </Nav>

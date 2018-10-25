@@ -37,11 +37,8 @@ body {
   max-width: 150px;
   height: 30px;
 }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> b34c3515e1cb28d78be91d06015c78199e256b74
 
 /* MainPage style */
 
@@ -49,6 +46,11 @@ body {
   width: 100%;
   height: 100%;
   order: 1;
+}
+
+.event-item {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 /* Footer style */
