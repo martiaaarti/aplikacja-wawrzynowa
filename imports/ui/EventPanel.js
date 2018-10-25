@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Collapse, Button, CardBody, Card, Container, Row, Col } from 'reactstrap';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
 
 export default class EventPanel extends Component {
@@ -15,24 +17,21 @@ export default class EventPanel extends Component {
 
     render() {
         return (
-            <Container>
-                <Row>
-                    <Col>
-                        <div>
+            <div>
+                <Card id="main-card">
+                    <CardBody className="card-body-style">
+                        <Button className="button-content" block color="#333" onClick={this.toggle} style={{ marginBottom: '0.5rem' }}>
+                            <FontAwesomeIcon icon="caret-right"/>
+                            Wydarzenie
+                        </Button>
+                        <Collapse isOpen={this.state.collapse}>
                             <Card>
-                                <CardBody>
-                                    <Button block color="#333" onClick={this.toggle} style={{ marginBottom: '0.5rem' }}>Wydarzenie</Button>
-                                    <Collapse isOpen={this.state.collapse}>
-                                        <Card>
-                                            <CardBody className="event-item">Poranne siódemki</CardBody>
-                                        </Card>
-                                    </Collapse>
-                                </CardBody>
+                                <CardBody className="event-item">Poranne siódemki</CardBody>
                             </Card>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+                        </Collapse>
+                    </CardBody>
+                </Card>
+            </div>
         )
     }
 }

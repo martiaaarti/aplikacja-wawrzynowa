@@ -48,9 +48,27 @@ body {
   order: 1;
 }
 
+#main-card {
+  margin-top: 25px;
+}
+
+.button-content {
+  text-align: left;
+  padding-left: 20px;
+}
+
 .event-item {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card-body-style {
+  padding-bottom: 15px;
+}
+
+.switch-button {
+ margin-top: 15px;
+ margin-bottom: 12px;
 }
 
 /* Footer style */
