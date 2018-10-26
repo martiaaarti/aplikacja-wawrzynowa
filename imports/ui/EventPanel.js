@@ -39,7 +39,7 @@ export default class EventPanel extends Component {
                             onEntered={this.onEntered}
                             onExited={this.onExited}>
                             <Card className="event-item">
-                                <CardBody>Poranne siódemki</CardBody>
+                                <CardBody style={{ paddingBottom: '10px', paddingTop: '10px' }}>Poranne siódemki</CardBody>
                             </Card>
                         </Collapse>
                     </CardBody>
