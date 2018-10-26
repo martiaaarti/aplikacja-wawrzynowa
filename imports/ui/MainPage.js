@@ -17,7 +17,7 @@ export default class MainPage extends Component {
                 <Row>
                     <Col xs="2"></Col>
                     <Col md="8"></Col>
-                    <Col xs="2"><Switch/></Col>
+                    <Col xs="2"><Switch /></Col>
                 </Row>
                 <Row>
                     <Col xs="2"></Col>
@@ -27,7 +27,11 @@ export default class MainPage extends Component {
                     <Col xs="2"></Col>
                 </Row>
                 <Row>
-                    <Col></Col>
+                    <Col xs="2"></Col>
+                    <Col md="8">
+                        <EventPanel />
+                    </Col>
+                    <Col xs="2"></Col>
                 </Row>
             </Container>
         )

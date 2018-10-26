@@ -10,7 +10,7 @@ export default class EventPanel extends Component {
         this.onEntered = this.onEntered.bind(this);
         this.onExited = this.onExited.bind(this);
         this.toggle = this.toggle.bind(this);
-        this.state = { collapse: false, status: <FontAwesomeIcon icon="caret-right" pull="left" size="lg"/>};
+        this.state = { collapse: false, status: <FontAwesomeIcon icon="caret-right" pull="left" size="lg"/> };
     }
 
     onEntered() {
