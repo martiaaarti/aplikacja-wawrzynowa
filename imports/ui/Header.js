@@ -62,7 +62,7 @@ export default class Header extends Component {
                                                 <DropdownToggle nav >
                                                     <FontAwesomeIcon icon="cog" />
                                                 </DropdownToggle>
-                                                <DropdownMenu right>
+                                                <DropdownMenu right className="responsive-menu">
                                                     <DropdownItem>
                                                         Spotkania Ministerstw
                                                 </DropdownItem>
