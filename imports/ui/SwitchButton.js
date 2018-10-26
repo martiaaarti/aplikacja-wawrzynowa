@@ -11,8 +11,8 @@ export default class Switch extends Component {
     render() {
         return (
             <ButtonGroup className="switch-button">
-                <Button>Lista</Button>
-                <Button>Kalendarz</Button>
+                <Button color="secondary">Lista</Button>
+                <Button color="secondary">Kalendarz</Button>
             </ButtonGroup>
         )
     }

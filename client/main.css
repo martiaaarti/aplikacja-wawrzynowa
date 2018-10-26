@@ -54,12 +54,14 @@ body {
 
 .button-content {
   text-align: left;
-  padding-left: 20px;
+}
+
+#icon-span {
+  padding-right: 5px;
 }
 
 .event-item {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0px;
 }
 
 .card-body-style {
