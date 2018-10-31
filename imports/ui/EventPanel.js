@@ -10,7 +10,7 @@ export default class EventPanel extends Component {
         this.onEnter = this.onEnter.bind(this);
         this.onExit = this.onExit.bind(this);
         this.toggle = this.toggle.bind(this);
-        this.state = { isMainCardCollapsed: false };
+        this.state = { collapse: false };
     }
 
     onEnter() {
@@ -27,14 +27,17 @@ export default class EventPanel extends Component {
     }
 
     render() {
+
+        const { eventType } = this.props
+
         return (
             <Card id="main-card">
                 <CardBody>
                     <Button block color="secondary" size="lg" onClick={this.toggle} style={{ marginBottom: '0.5rem', textAlign: 'left' }}>
                         <span>
-                            <FontAwesomeIcon icon={this.state.isMainCardCollapsed ? "caret-right" : "caret-down"} pull="left" size="lg" style={{ paddingRight: '5px' }} />
+                            <FontAwesomeIcon icon={this.state.collapse ? "caret-right" : "caret-down"} pull="left" size="lg" style={{ paddingRight: '5px' }} />
                         </span>
-                        Wydarzenie
+                        {eventType}
                         </Button>
                     <Collapse isOpen={this.state.collapse}
                         onEnter={this.onEnter}
