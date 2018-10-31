@@ -13,7 +13,7 @@ export default class MainPage extends Component {
 
     render() {
         return (
-            <Container className="main-content">
+            <Container className="main-page-content">
                 <Row>
                     <Col xs="2"></Col>
                     <Col md="8"></Col>

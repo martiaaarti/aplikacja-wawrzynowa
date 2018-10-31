@@ -7,18 +7,18 @@ import { Collapse, Button, CardBody, Card } from 'reactstrap';
 export default class EventPanel extends Component {
     constructor(props) {
         super(props);
-        this.onEntered = this.onEntered.bind(this);
-        this.onExited = this.onExited.bind(this);
+        this.onEnter = this.onEnter.bind(this);
+        this.onExit = this.onExit.bind(this);
         this.toggle = this.toggle.bind(this);
-        this.state = { collapse: false, status: <FontAwesomeIcon icon="caret-right" pull="left" size="lg"/> };
+        this.state = { isMainCardCollapsed: false };
     }
 
-    onEntered() {
-        this.setState({ status: <FontAwesomeIcon icon="caret-down" pull="left" size="lg"/> });
+    onEnter() {
+        this.setState({ status: <FontAwesomeIcon icon="caret-down" pull="left" size="lg" /> });
     }
 
-    onExited() {
-        this.setState({ status: <FontAwesomeIcon icon="caret-right" pull="left" size="lg"/> });
+    onExit() {
+        this.setState({ status: <FontAwesomeIcon icon="caret-right" pull="left" size="lg" /> });
     }
 
 
@@ -28,23 +28,23 @@ export default class EventPanel extends Component {
 
     render() {
         return (
-            <div>
-                <Card id="main-card">
-                    <CardBody>
-                        <Button block color="secondary" size="lg" onClick={this.toggle} style={{ marginBottom: '0.5rem', textAlign: 'left' }}>
-                            <span id="icon-span">{this.state.status}</span>
-                            Wydarzenie
+            <Card id="main-card">
+                <CardBody>
+                    <Button block color="secondary" size="lg" onClick={this.toggle} style={{ marginBottom: '0.5rem', textAlign: 'left' }}>
+                        <span>
+                            <FontAwesomeIcon icon={this.state.isMainCardCollapsed ? "caret-right" : "caret-down"} pull="left" size="lg" style={{ paddingRight: '5px' }} />
+                        </span>
+                        Wydarzenie
                         </Button>
-                        <Collapse isOpen={this.state.collapse}
-                            onEntered={this.onEntered}
-                            onExited={this.onExited}>
-                            <Card className="event-item">
-                                <CardBody style={{ paddingBottom: '10px', paddingTop: '10px' }}>Poranne siódemki</CardBody>
-                            </Card>
-                        </Collapse>
-                    </CardBody>
-                </Card>
-            </div>
+                    <Collapse isOpen={this.state.collapse}
+                        onEnter={this.onEnter}
+                        onExit={this.onExit}>
+                        <Card style={{ paddingTop: '0px'}}>
+                            <CardBody style={{ paddingBottom: '10px', paddingTop: '10px' }}>Poranne siódemki</CardBody>
+                        </Card>
+                    </Collapse>
+                </CardBody>
+            </Card>
         )
     }
 }

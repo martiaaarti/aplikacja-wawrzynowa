@@ -42,7 +42,7 @@ body {
 
 /* MainPage style */
 
-.main-content {
+.main-page-content {
   width: 100%;
   height: 100%;
   order: 1;
@@ -56,21 +56,8 @@ body {
   text-align: left;
 }
 
-#icon-span {
-  padding-right: 5px;
-}
-
-.event-item {
-  padding-top: 0px;
-}
-
 .card-body-style {
   padding-bottom: 15px;
-}
-
-.switch-button {
- margin-top: 15px;
- margin-bottom: 12px;
 }
 
 /* Footer style */
