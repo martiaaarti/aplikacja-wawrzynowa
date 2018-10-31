@@ -10,3 +10,5 @@ const Switch = props => {
         </ButtonGroup>
     );
 };
+
+export default Switch;
