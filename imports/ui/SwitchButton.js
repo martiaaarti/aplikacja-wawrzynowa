@@ -2,13 +2,19 @@ import React, { Component } from 'react';
 import { Button, ButtonGroup } from 'reactstrap';
 
 
-const Switch = props => {
-    return (
-        <ButtonGroup style={{ marginTop: '15px', marginBottom: '12px' }}>
-            <Button color="secondary">Lista</Button>
-            <Button color="secondary">Kalendarz</Button>
-        </ButtonGroup>
-    );
-};
+export default class Switch extends Component {
+    constructor(props) {
+        super(props);
+    }
 
-export default Switch;
+    render() {
+        return (
+            <ButtonGroup style={{ marginTop: '15px', marginBottom: '12px' }}>
+                <Button color="secondary">Lista</Button>
+                <Button color="secondary">Kalendarz</Button>
+            </ButtonGroup>
+        )
+    }
+}
+
+

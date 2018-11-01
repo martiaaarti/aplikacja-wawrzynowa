@@ -15,23 +15,23 @@ export default class MainPage extends Component {
         return (
             <Container className="main-page-content">
                 <Row>
-                    <Col xs="2"></Col>
-                    <Col md="8"></Col>
-                    <Col xs="2"><Switch /></Col>
+                    <Col></Col>
+                    <Col className="col-7"></Col>
+                    <Col><Switch/></Col>
                 </Row>
                 <Row>
-                    <Col xs="2"></Col>
-                    <Col md="8">
+                    <Col></Col>
+                    <Col className="col-7">
                         <EventPanel id='single-events' eventType={'Wydarzenia Okazyjne'} />
                     </Col>
-                    <Col xs="2"></Col>
+                    <Col></Col>
                 </Row>
                 <Row>
-                    <Col xs="2"></Col>
-                    <Col md="8">
+                    <Col></Col>
+                    <Col className="col-7">
                         <EventPanel id='recurring-events' eventType={'Wydarzenia Cotygodniowe'}/>
                     </Col>
-                    <Col xs="2"></Col>
+                    <Col></Col>
                 </Row>
             </Container>
         )
