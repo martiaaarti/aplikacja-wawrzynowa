@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
@@ -17,10 +18,10 @@ export default class EventPanel extends Component {
 
     render() {
 
-        const { eventType } = this.props
+        const { eventType, id } = this.props
 
         return (
-            <Card id="event-panel-main-card">
+            <Card id={`${id}-event-panel`} className='my-2'>
                 <CardBody>
                     <Button block color="secondary" size="lg" onClick={this.toggle} style={{ marginBottom: '0.5rem', textAlign: 'left' }}>
                         <span>
@@ -38,4 +39,8 @@ export default class EventPanel extends Component {
         )
     }
 }
+
+EventPanel.propTypes = {
+    id: PropTypes.string.isRequired
+};
 
