@@ -9,7 +9,7 @@ export default class Switch extends Component {
 
     render() {
         return (
-            <ButtonGroup style={{ marginTop: '15px', marginBottom: '12px' }}>
+            <ButtonGroup className='my-4'>
                 <Button color="secondary">Lista</Button>
                 <Button color="secondary">Kalendarz</Button>
             </ButtonGroup>

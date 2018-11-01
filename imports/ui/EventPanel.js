@@ -22,14 +22,14 @@ export default class EventPanel extends Component {
 
         return (
             <Card id={`${id}-event-panel`} className='my-2'>
-                <CardBody>
-                    <Button block color="secondary" size="lg" onClick={this.toggle} style={{ marginBottom: '0.5rem', textAlign: 'left' }}>
-                        <FontAwesomeIcon icon={this.state.isMainCardOpen ? "caret-down" : "caret-right"} pull="left" size="lg" style={{ paddingRight: '5px' }} />
+                <CardBody className='p-3'>
+                    <Button block color="secondary" size="lg" onClick={this.toggle} className='mb-2 text-left'>
+                        <FontAwesomeIcon icon={this.state.isMainCardOpen ? "caret-down" : "caret-right"} pull="left" size="lg" />
                     {eventType}
                     </Button>
                     <Collapse isOpen={this.state.isMainCardOpen}>
                         <Card className='pt-0'>
-                            <CardBody style={{ paddingBottom: '10px', paddingTop: '10px' }}>Poranne siódemki</CardBody>
+                            <CardBody className='py-2'>Poranne siódemki</CardBody>
                         </Card>
                     </Collapse>
                 </CardBody>
