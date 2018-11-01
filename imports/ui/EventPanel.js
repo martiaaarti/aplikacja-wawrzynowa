@@ -20,12 +20,10 @@ export default class EventPanel extends Component {
         const { eventType } = this.props
 
         return (
-            <Card id="event-panel-main-card">
+            <Card className="mt-4">
                 <CardBody>
                     <Button block color="secondary" size="lg" onClick={this.toggle} style={{ marginBottom: '0.5rem', textAlign: 'left' }}>
-                        <span>
-                            <FontAwesomeIcon icon={this.state.collapse ? "caret-right" : "caret-down"} pull="left" size="lg" style={{ paddingRight: '5px' }} />
-                        </span>
+                        <FontAwesomeIcon icon={this.state.collapse ? "caret-right" : "caret-down"} pull="left" size="lg" style={{ paddingRight: '5px' }} />
                     {eventType}
                     </Button>
                     <Collapse isOpen={this.state.collapse}>

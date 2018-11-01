@@ -48,16 +48,8 @@ body {
   order: 1;
 }
 
-#event-panel-main-card {
-  margin-top: 35px;
-}
-
 .button-content {
   text-align: left;
-}
-
-.card-body-style {
-  padding-bottom: 15px;
 }
 
 /* Footer style */
