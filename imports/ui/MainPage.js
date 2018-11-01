@@ -22,14 +22,14 @@ export default class MainPage extends Component {
                 <Row>
                     <Col></Col>
                     <Col className="col-7">
-                        <EventPanel id='single-events' eventType={'Wydarzenia Okazyjne'} />
+                        <EventPanel id='single-events' eventType={'Wydarzenia pojedyncze'} />
                     </Col>
                     <Col></Col>
                 </Row>
                 <Row>
                     <Col></Col>
                     <Col className="col-7">
-                        <EventPanel id='recurring-events' eventType={'Wydarzenia Cotygodniowe'}/>
+                        <EventPanel id='recurring-events' eventType={'Wydarzenia cykliczne'}/>
                     </Col>
                     <Col></Col>
                 </Row>

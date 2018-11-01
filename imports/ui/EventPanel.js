@@ -9,11 +9,11 @@ export default class EventPanel extends Component {
     constructor(props) {
         super(props);
         this.toggle = this.toggle.bind(this);
-        this.state = { isMainCardCollapsed: false };
+        this.state = { isMainCardOpen: false };
     }
    
     toggle() {
-        this.setState({ isMainCardCollapsed: !this.state.isMainCardCollapsed });
+        this.setState({ isMainCardOpen: !this.state.isMainCardOpen });
     }
 
     render() {
@@ -24,10 +24,10 @@ export default class EventPanel extends Component {
             <Card id={`${id}-event-panel`} className='my-2'>
                 <CardBody>
                     <Button block color="secondary" size="lg" onClick={this.toggle} style={{ marginBottom: '0.5rem', textAlign: 'left' }}>
-                        <FontAwesomeIcon icon={this.state.isMainCardCollapsed ? "caret-right" : "caret-down"} pull="left" size="lg" style={{ paddingRight: '5px' }} />
+                        <FontAwesomeIcon icon={this.state.isMainCardOpen ? "caret-down" : "caret-right"} pull="left" size="lg" style={{ paddingRight: '5px' }} />
                     {eventType}
                     </Button>
-                    <Collapse isOpen={this.state.isMainCardCollapsed}>
+                    <Collapse isOpen={this.state.isMainCardOpen}>
                         <Card className='pt-0'>
                             <CardBody style={{ paddingBottom: '10px', paddingTop: '10px' }}>Poranne siódemki</CardBody>
                         </Card>
