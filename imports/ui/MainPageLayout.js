@@ -15,23 +15,23 @@ export default class MainPageLayout extends Component {
         return (
             <div>
                 <Row>
-                    <Col></Col>
-                    <Col className="col-7"></Col>
-                    <Col><Switch /></Col>
+                    <Col md="2" sm="0"></Col>
+                    <Col md="8" sm="12"></Col>
+                    <Col md="2" sm="0"><Switch/></Col>
                 </Row>
                 <Row>
-                    <Col></Col>
-                    <Col className="col-7">
+                    <Col md="2" sm="0"></Col>
+                    <Col md="8" sm="12">
                         <EventPanel id='single-events' eventType={'Wydarzenia pojedyncze'} />
                     </Col>
-                    <Col></Col>
+                    <Col md="2" sm="0"></Col>
                 </Row>
                 <Row>
-                    <Col></Col>
-                    <Col className="col-7">
+                    <Col md="2" sm="0"></Col>
+                    <Col md="8" sm="12">
                         <EventPanel id='recurring-events' eventType={'Wydarzenia cykliczne'} />
                     </Col>
-                    <Col></Col>
+                    <Col md="2" sm="0"></Col>
                 </Row>
             </div>
         )
