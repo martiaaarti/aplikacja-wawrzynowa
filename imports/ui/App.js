@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'; 
 
+import { withTracker } from 'meteor/react-meteor-data';
+ 
+import { Event } from '../api/event.js';
 
 import Header from './Header.js';
 import MainPage from './MainPage.js';

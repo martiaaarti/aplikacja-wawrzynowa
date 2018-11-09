@@ -1,1 +1,1 @@
-//import '../imports/api/single-event.js';
+import '../imports/api/event.js';
