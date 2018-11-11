@@ -1,1 +1,1 @@
-import '../imports/api/event.js';
+import '../imports/api/events.js';
