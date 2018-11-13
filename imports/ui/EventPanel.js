@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Row, Col, Collapse, Button, CardBody, Card } from 'reactstrap';
-import Events from './Events.js'
+import Event from './Event.js'
 
 export default class EventPanel extends Component {
     constructor(props) {
@@ -11,6 +11,19 @@ export default class EventPanel extends Component {
         this.toggle = this.toggle.bind(this);
         this.state = { isMainCardOpen: false };
     }
+    getEvents() {
+        return [
+          { _id: 1, text: 'Ponanne siódemki' },
+          { _id: 2, text: 'Wieczerza czwartkowa' },
+          { _id: 3, text: 'Kurs przedmałeński' },
+        ];
+      }
+     
+      renderEvents() {
+        return this.getEvents().map((event) => (
+          <Event key={event._id} event={event} className="py-2"/>
+        ));
+      }
 
     toggle() {
         this.setState({ isMainCardOpen: !this.state.isMainCardOpen });
@@ -30,7 +43,7 @@ export default class EventPanel extends Component {
                                 {eventType}
                             </Button>
                             <Collapse isOpen={this.state.isMainCardOpen}>
-                                <Events />
+                                {this.renderEvents()}
                             </Collapse>
                         </CardBody>
                     </Card>
