@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Row, Col, Collapse, Button, CardBody, Card } from 'reactstrap';
-
+import Events from './Events.js'
 
 export default class EventPanel extends Component {
     constructor(props) {
@@ -30,9 +30,7 @@ export default class EventPanel extends Component {
                                 {eventType}
                             </Button>
                             <Collapse isOpen={this.state.isMainCardOpen}>
-                                <Card className='pt-0'>
-                                    <CardBody className='py-2'>Poranne siódemki</CardBody>
-                                </Card>
+                                <Events />
                             </Collapse>
                         </CardBody>
                     </Card>
