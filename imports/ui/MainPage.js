@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 
 import EventsListView from './EventsListView.js';
-import Event from './Event.js';
 
 
 // MainPage component - represents a main content of the app

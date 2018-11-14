@@ -3,24 +3,19 @@ import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Row, Col, Collapse, Button, CardBody, Card } from 'reactstrap';
-import Event from './Event.js'
+import Event from './Event.js';
+import { withTracker } from 'meteor/react-meteor-data'; 
+import { Events } from '../api/events.js';
 
-export default class EventPanel extends Component {
+class EventPanel extends Component {
     constructor(props) {
         super(props);
         this.toggle = this.toggle.bind(this);
         this.state = { isMainCardOpen: false };
     }
-    getEvents() {
-        return [
-          { _id: 1, text: 'Ponanne siódemki' },
-          { _id: 2, text: 'Wieczerza czwartkowa' },
-          { _id: 3, text: 'Kurs przedmałeński' },
-        ];
-      }
      
       renderEvents() {
-        return this.getEvents().map((event) => (
+        return this.props.events.map((event) => (
           <Event key={event._id} event={event} className="py-2"/>
         ));
       }
@@ -52,6 +47,11 @@ export default class EventPanel extends Component {
         )
     }
 }
+export default withTracker(() => {
+    return {
+      events: Events.find({}).fetch(),
+    };
+  })(EventPanel);
 
 EventPanel.propTypes = {
     id: PropTypes.string.isRequired,
