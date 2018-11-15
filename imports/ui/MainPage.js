@@ -2,20 +2,25 @@ import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 
 import EventsListView from './EventsListView.js';
+import { withTracker } from 'meteor/react-meteor-data'; 
+import { Events } from '../api/events.js';
 
-
-// MainPage component - represents a main content of the app
-export default class MainPage extends Component {
+class MainPage extends Component {
     constructor(props) {
         super(props);
     }
+  
 
     render() {
         return (
             <Container className="w-100 h-100">
-                <EventsListView/>
-                
+                <EventsListView events={events}/>                
             </Container>
         )
     }
 }
+export default withTracker(() => {
+    return {
+      events: Events.find({}).fetch(),
+    };
+  })(MainPage);

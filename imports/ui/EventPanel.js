@@ -4,10 +4,8 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Row, Col, Collapse, Button, CardBody, Card } from 'reactstrap';
 import Event from './Event.js';
-import { withTracker } from 'meteor/react-meteor-data'; 
-import { Events } from '../api/events.js';
 
-class EventPanel extends Component {
+export default class EventPanel extends Component {
     constructor(props) {
         super(props);
         this.toggle = this.toggle.bind(this);
@@ -26,7 +24,7 @@ class EventPanel extends Component {
 
     render() {
 
-        const { eventType, id } = this.props
+        const { eventType, id, eventsList } = this.props
 
         return (
             <Row>
@@ -47,11 +45,6 @@ class EventPanel extends Component {
         )
     }
 }
-export default withTracker(() => {
-    return {
-      events: Events.find({}).fetch(),
-    };
-  })(EventPanel);
 
 EventPanel.propTypes = {
     id: PropTypes.string.isRequired,

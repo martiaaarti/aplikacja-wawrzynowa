@@ -10,6 +10,9 @@ export default class EventsListView extends Component {
     }
 
     render() {
+
+        const { eventsList }= this.props 
+
         return (
             <div>
                 <div className="d-flex justify-content-end"><Switch /></div>
