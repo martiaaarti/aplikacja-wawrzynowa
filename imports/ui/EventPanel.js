@@ -47,5 +47,6 @@ export default class EventPanel extends Component {
 
 EventPanel.propTypes = {
     id: PropTypes.string.isRequired,
-    eventType: PropTypes.string
+    eventType: PropTypes.string,
+    eventsPassedFromPanel: PropTypes.array.isRequired,
 };

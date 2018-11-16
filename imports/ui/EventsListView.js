@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import EventPanel from './EventPanel.js';
-import Switch from './SwitchButton.js'
+import Switch from './SwitchButton.js';
+import PropTypes from 'prop-types';
 
 
 export default class EventsListView extends Component {
@@ -20,3 +21,8 @@ export default class EventsListView extends Component {
         )
     }
 }
+
+EventsListView.propTypes = {
+    eventsPassedFromListView: PropTypes.array.isRequired,
+};
+    

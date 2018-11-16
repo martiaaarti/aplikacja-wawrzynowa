@@ -4,6 +4,7 @@ import { Container } from 'reactstrap';
 import EventsListView from './EventsListView.js';
 import { withTracker } from 'meteor/react-meteor-data'; 
 import { Events } from '../api/events.js';
+import PropTypes from 'prop-types';
 
 class MainPage extends Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class MainPage extends Component {
   
 
     render() {
+
         return (
             <Container className="w-100 h-100">
                 <EventsListView eventsPassedFromListView={this.props.events}/>                
@@ -19,8 +21,14 @@ class MainPage extends Component {
         )
     }
 }
+
 export default withTracker(() => {
     return {
       events: Events.find({}).fetch(),
     };
   })(MainPage);
+
+  MainPage.propTypes = {
+        events: PropTypes.array.isRequired,
+    };
+

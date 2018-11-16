@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
 import { CardBody, Card } from 'reactstrap';
+import PropTypes from 'prop-types';
 
 export default class Event extends Component {
     constructor(props) {
         super(props);
     }
     render() {
-
 
         return (
             <div className="py-1">
@@ -19,4 +19,6 @@ export default class Event extends Component {
     }
 }
 
-
+Event.propTypes = {
+     eventsList: PropTypes.object.isRequired
+ };
