@@ -13,7 +13,7 @@ export default class EventPanel extends Component {
     }
      
       renderEvents() {
-        return this.props.events.map((event) => (
+        return this.props.eventsPassedFromPanel.map((event) => (
           <Event key={event._id} event={event} className="py-2"/>
         ));
       }
@@ -23,8 +23,7 @@ export default class EventPanel extends Component {
     }
 
     render() {
-
-        const { eventType, id, eventsList } = this.props
+        const { eventType, id } = this.props
 
         return (
             <Row>
@@ -50,4 +49,3 @@ EventPanel.propTypes = {
     id: PropTypes.string.isRequired,
     eventType: PropTypes.string
 };
-

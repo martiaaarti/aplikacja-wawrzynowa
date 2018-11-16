@@ -8,6 +8,7 @@ export default class Event extends Component {
     }
     render() {
 
+
         return (
             <div className="py-1">
             <Card className="pt-0">
