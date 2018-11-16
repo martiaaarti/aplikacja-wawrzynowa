@@ -12,7 +12,7 @@ export default class Event extends Component {
         return (
             <div className="py-1">
             <Card className="pt-0">
-                <CardBody className="py-2">{this.props.event.text}</CardBody>
+                <CardBody className="py-2">{this.props.eventsList.text}</CardBody>
             </Card>
             </div>
         )

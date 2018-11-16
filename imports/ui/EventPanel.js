@@ -13,8 +13,8 @@ export default class EventPanel extends Component {
     }
      
       renderEvents() {
-        return this.props.eventsPassedFromPanel.map((event) => (
-          <Event key={event._id} event={event} className="py-2"/>
+        return this.props.eventsPassedFromPanel.map((eventsList) => (
+          <Event key={eventsList._id} eventsList={eventsList} className="py-2"/>
         ));
       }
 
