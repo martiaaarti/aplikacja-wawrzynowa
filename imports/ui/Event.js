@@ -11,14 +11,17 @@ export default class Event extends Component {
 
         return (
             <div className="py-1">
-            <Card className="pt-0">
-                <CardBody className="py-2">{this.props.eventsList.text}</CardBody>
-            </Card>
+                <Card className="pt-0">
+                    <CardBody className="py-2">{this.props.eventsList.text}</CardBody>
+                </Card>
             </div>
         )
     }
 }
 
 Event.propTypes = {
-     eventsList: PropTypes.object.isRequired
- };
+    eventsList: PropTypes.shape({
+        color: PropTypes.string,
+        fontSize: PropTypes.number
+    })
+};
