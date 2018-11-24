@@ -16,11 +16,12 @@ const dataModelEvents = new SimpleSchema({
         optional: true
     },
     attendees: {
-        type: [SimpleSchema.Integer],
+        type: Array,
         optional: true
+    },
+    'attendees.$': {
+        type: SimpleSchema.Integer
     }
-
-
 });
 
 Events.attachSchema(dataModelEvents);
