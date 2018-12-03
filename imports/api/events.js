@@ -9,8 +9,14 @@ const dataModelEvents = new SimpleSchema({
     name: { type: String },
     description: { type: String },
     meetingPalace: { type: String },
-    startDateTime: { type: Date },
-    duration: { type: SimpleSchema.Integer },
+    startDateTime: {
+        type: Date,
+        optional: true
+    },
+    duration: {
+        type: SimpleSchema.Integer,
+        optional: true
+    },
     attendeesLimit: {
         type: SimpleSchema.Integer,
         optional: true
