@@ -22,6 +22,7 @@ export default class Event extends Component {
 Event.propTypes = {
     eventsList: PropTypes.shape({
         color: PropTypes.string,
-        fontSize: PropTypes.number
+        fontSize: PropTypes.number,
+        name: PropTypes.string
     })
 };
