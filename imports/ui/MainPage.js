@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 
-import EventsListView from './EventsListView.js';
+import EventsView from './EventsView.js';
 
 
 // MainPage component - represents a main content of the app
@@ -13,7 +13,7 @@ export default class MainPage extends Component {
     render() {
         return (
             <Container className="w-100 h-100">
-                <EventsListView/>
+            <EventsView/>
             </Container>
         )
     }
