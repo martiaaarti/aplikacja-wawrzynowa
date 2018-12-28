@@ -7,7 +7,9 @@ class EventDescription extends Component {
     render() {
         return (
             <div>
-                <Link to="/">Close</Link>
+                <Link to="/">
+                <FontAwesomeIcon icon="arrow-left" size="2x" color="rgba(0,0,0,.5)" className="mt-3" />
+                </Link>
             </div>
         )
     }

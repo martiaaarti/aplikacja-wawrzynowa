@@ -34,7 +34,8 @@ export default class EventPanel extends Component {
                                 <Card className='pt-0'>
                                     <CardBody className='py-2'>
                                     <Link 
-                                    to='/description'>
+                                    to='/description'
+                                    className="text-secondary">
                                     Poranne siódemki
                                     </Link>                                    
                                     </CardBody>
