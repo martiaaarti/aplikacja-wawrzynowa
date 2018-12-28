@@ -8,6 +8,6 @@ import App from '../imports/ui/App.js';
  
 Meteor.startup(() => {
   render(
-  <BrowserRouter><App /></BrowserRouter>
-  , document.getElementById('render-target'));
+  <BrowserRouter><App/></BrowserRouter>,
+  document.getElementById('render-target'));
 });

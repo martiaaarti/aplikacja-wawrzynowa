@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'; 
 
-
 import Header from './Header.js';
 import MainPage from './MainPage.js';
 import Footer from './Footer.js';

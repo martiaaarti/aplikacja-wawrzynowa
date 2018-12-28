@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Row, Col, Collapse, Button, CardBody, Card } from 'reactstrap';
@@ -31,7 +32,12 @@ export default class EventPanel extends Component {
                             </Button>
                             <Collapse isOpen={this.state.isMainCardOpen}>
                                 <Card className='pt-0'>
-                                    <CardBody className='py-2'>Poranne siódemki</CardBody>
+                                    <CardBody className='py-2'>
+                                    <Link 
+                                    to='/description'>
+                                    Poranne siódemki
+                                    </Link>                                    
+                                    </CardBody>
                                 </Card>
                             </Collapse>
                         </CardBody>
