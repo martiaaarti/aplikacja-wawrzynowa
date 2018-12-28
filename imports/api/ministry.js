@@ -17,11 +17,10 @@ const dataModelMinistry = new SimpleSchema({
     color: { type: String },
 
     volunteerEvents: {
-        type: Array,
-        // collection: Events
+        type: Array
     },
     'volunteerEvents.$': {
-        type: SimpleSchema.Integer
+        type: Object
     },
 
     recurringEvents: {
@@ -43,3 +42,15 @@ const dataModelMinistry = new SimpleSchema({
 });
 
 Ministry.attachSchema(dataModelMinistry);
+
+Ministry.addLinks({
+    volunteerEvents: {
+        collection: Events,
+        inversedBy: 'dataModelEvents'
+    }
+});
+Ministry.createQuery({
+    volunteerEvents: {
+        id: 1     
+    }
+}).fetch();

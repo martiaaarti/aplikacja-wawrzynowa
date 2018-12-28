@@ -1,5 +1,6 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
+import { Ministry } from './ministry';
 
 export const Events = new Mongo.Collection('events');
 
@@ -22,12 +23,16 @@ const dataModelEvents = new SimpleSchema({
         optional: true
     },
     attendees: {
-        type: Array,
+        type: SimpleSchema.Integer,
         optional: true
-    },
-    'attendees.$': {
-        type: SimpleSchema.Integer
     }
 });
 
 Events.attachSchema(dataModelEvents);
+Events.addLinks({
+    dataModelEvents: {
+        type: 'one',
+        field: 'dataModelEventsId',
+        collection: Ministry
+    }
+});
