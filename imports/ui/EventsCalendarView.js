@@ -8,7 +8,7 @@ export default class EventsCalendarView extends Component {
     render() {
         return (
             <div>
-                <hi>Calendar</hi>
+                <h1>Calendar</h1>
             </div>
         )
     }
