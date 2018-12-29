@@ -1,2 +1,2 @@
-import '../imports/api/events.js';
-import '../imports/api/ministry.js';
+import '../imports/db/events/collection';
+import '../imports/db/ministries/collection';

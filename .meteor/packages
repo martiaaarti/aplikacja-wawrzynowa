@@ -21,6 +21,6 @@ static-html
 react-meteor-data
 accounts-ui
 accounts-password
-aldeed:collection2-core@2.0.0
+aldeed:collection2-core
 aldeed:collection2@3.0.0
 cultofcoders:grapher

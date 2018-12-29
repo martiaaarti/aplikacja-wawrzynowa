@@ -1,0 +1,1 @@
+import './ministries/links.js';

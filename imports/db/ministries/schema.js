@@ -1,17 +1,15 @@
-import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
-import { Events } from './events';
 
-export const Ministry = new Mongo.Collection('ministry');
-
-const dataModelMinistry = new SimpleSchema({
+export default new SimpleSchema({
 
     id: { type: SimpleSchema.Integer },
     ownerId: { type: SimpleSchema.Integer },
     admins: { type: Array },
+
     'admins.$': {
         type: SimpleSchema.Integer
     },
+    
     name: { type: String },
     description: String,
     color: { type: String },
@@ -38,19 +36,4 @@ const dataModelMinistry = new SimpleSchema({
     'singleEvents.$': {
         type: SimpleSchema.Integer
     }
-
 });
-
-Ministry.attachSchema(dataModelMinistry);
-
-Ministry.addLinks({
-    volunteerEvents: {
-        collection: Events,
-        inversedBy: 'dataModelEvents'
-    }
-});
-Ministry.createQuery({
-    volunteerEvents: {
-        id: 1     
-    }
-}).fetch();
