@@ -1,4 +1,8 @@
 /* CSS declarations go here */
+:root {
+  --main-fontawesome-color: rgba(0,0,0,.5);
+}
+
 body {
   font-family: Arial, Tahoma, Verdana;
   background-attachment: fixed;
@@ -45,8 +49,13 @@ body {
 }
 
 p {
-  color: rgba(0,0,0,.5);
+  color: var(--main-fontawesome-color);
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 17px;
+}
+
+.description-back-icon, .facebook-icon, .youtube-icon {
+  color: var(--main-fontawesome-color);
 }

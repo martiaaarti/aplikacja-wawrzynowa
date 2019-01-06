@@ -8,11 +8,11 @@ class EventDescription extends Component {
         return (
             <div>
                 <Link to="/">
-                <FontAwesomeIcon icon="arrow-left" size="2x" color="rgba(0,0,0,.5)" className="mt-3" />
+                    <FontAwesomeIcon icon="arrow-left" size="2x" className="mt-3 description-back-icon" />
                 </Link>
             </div>
         )
     }
 }
 
-export default EventDescription
+export default EventDescription;
