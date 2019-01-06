@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
+import { Route } from 'react-router-dom';
 
 import EventsView from './EventsView.js';
+import EventDescription from './EventDescription.js';
 
 
-// MainPage component - represents a main content of the app
 export default class MainPage extends Component {
     constructor(props) {
         super(props);
@@ -13,7 +14,15 @@ export default class MainPage extends Component {
     render() {
         return (
             <Container className="w-100 h-100">
-            <EventsView/>
+                <div>
+                    <Route exact path="/" render={() => (
+                        <EventsView/>
+                    )}/> 
+
+                    <Route path="/description" render={() => (
+                        <EventDescription/>
+                    )}/>             
+                </div>            
             </Container>
         )
     }

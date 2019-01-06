@@ -33,11 +33,11 @@ export default class EventPanel extends Component {
                             <Collapse isOpen={this.state.isMainCardOpen}>
                                 <Card className='pt-0'>
                                     <CardBody className='py-2'>
-                                    <Link 
-                                    to='/description'
-                                    className="text-secondary">
-                                    Poranne siódemki
-                                    </Link>                                    
+                                        <Link 
+                                        to='/description'
+                                        className="text-secondary">
+                                        Poranne siódemki
+                                        </Link>                                    
                                     </CardBody>
                                 </Card>
                             </Collapse>
