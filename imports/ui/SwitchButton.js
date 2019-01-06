@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Button, ButtonGroup } from 'reactstrap';
 
 
@@ -17,6 +18,10 @@ export default class SwitchButton extends Component {
             </div>             
         )
     }
+}
+
+SwitchButton.propTypes = {
+    onNavigate: PropTypes.func.isRequired
 }
 
 
