@@ -1,9 +1,9 @@
 import { Mongo } from 'meteor/mongo';
-import dataModelEvents from './schema';
+import eventSchema from './schema';
 
 const Events = new Mongo.Collection('events');
 
-Events.attachSchema(dataModelEvents);
+Events.attachSchema(eventSchema);
 
 export default Events;
 

@@ -11,7 +11,6 @@ class MainPage extends Component {
         super(props);
     }
 
-
     render() {
 
         return (
@@ -29,6 +28,6 @@ export default withTracker(() => {
 })(MainPage);
 
 MainPage.propTypes = {
-    events: PropTypes.array.isRequired,
+    events: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 

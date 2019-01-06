@@ -8,9 +8,3 @@ Ministries.addLinks({
     }
 });
 
-Events.addLinks({
-    dataModelEvents: {
-        collection: Ministries,
-        inversedBy: 'volunteerEventsLink'
-    }
-});

@@ -5,7 +5,7 @@ export default new SimpleSchema({
     id: { type: SimpleSchema.Integer },
     name: { type: String },
     description: { type: String },
-    meetingPalace: { type: String },
+    meetingPlace: { type: String },
 
     startDateTime: {
         type: Date
@@ -22,7 +22,10 @@ export default new SimpleSchema({
     },
 
     attendees: {
-        type: SimpleSchema.Integer,
+        type: Array,
         optional: true
+    },
+    'attendees.$': {
+        type: SimpleSchema.Integer
     }
 });

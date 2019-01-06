@@ -1,28 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { CardBody, Card } from 'reactstrap';
-import PropTypes from 'prop-types';
+import {eventsList} from './types/eventPropTypes.js';
 
-export default class Event extends Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
+const Event = ({eventsList}) => {
+    return (
 
-        return (
-            <div className="py-1">
-                <Card className="pt-0">
-                    <CardBody className="py-2">{this.props.eventsList.name}</CardBody>
-                </Card>
-            </div>
-        )
-    }
-}
+        <div className="py-1">
+            <Card className="pt-0">
+                <CardBody className="py-2">{eventsList.name}</CardBody>
+            </Card>
+        </div>
+
+    )
+};
 
 Event.propTypes = {
-    eventsList: PropTypes.shape({
-        color: PropTypes.string,
-        fontSize: PropTypes.number,
-        name: PropTypes.string
-    })
-};
+    eventsList: eventsList.isRequired
+    };
+
+export default Event;
+
+

@@ -12,7 +12,7 @@ export default class EventPanel extends Component {
         this.state = { isMainCardOpen: false };
     }
      
-      renderEvents() {
+    renderEvents() {
         return this.props.events.map((eventsList) => (
           <Event key={eventsList._id} eventsList={eventsList} className="py-2"/>
         ));
@@ -46,7 +46,7 @@ export default class EventPanel extends Component {
 }
 
 EventPanel.propTypes = {
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     eventType: PropTypes.string,
-    events: PropTypes.array.isRequired,
+    events: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

@@ -39,5 +39,5 @@ export default class EventsListView extends Component {
 }
 
 EventsListView.propTypes = {
-    events: PropTypes.array.isRequired
+    events: PropTypes.arrayOf(PropTypes.object).isRequired
 };

@@ -1,8 +1,8 @@
 import { Mongo } from 'meteor/mongo';
-import dataModelMinistry from './schema';
+import ministrySchema from './schema';
 
 const Ministries = new Mongo.Collection('ministries');
 
-Ministries.attachSchema(dataModelMinistry);
+Ministries.attachSchema(ministrySchema);
 
 export default Ministries;
