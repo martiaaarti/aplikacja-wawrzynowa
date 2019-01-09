@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import EventPanel from './EventPanel.js';
 import Switch from './SwitchButton.js';
 import PropTypes from 'prop-types';
+import { eventPropTypes } from './types/eventPropTypes.js';
 
 const eventTypes = [
     {
@@ -28,7 +29,7 @@ export default class EventsListView extends Component {
                 {eventTypes.map((eventType) => (
                     <EventPanel 
                     key = {eventType.id} 
-                    eventType={eventType.title}                    
+                    eventType={eventType}                    
                     events={this.props.events} 
                     />
 
@@ -39,5 +40,5 @@ export default class EventsListView extends Component {
 }
 
 EventsListView.propTypes = {
-    events: PropTypes.arrayOf(PropTypes.object).isRequired
+    events: PropTypes.arrayOf(eventPropTypes).isRequired
 };

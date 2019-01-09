@@ -5,6 +5,7 @@ import EventsListView from './EventsListView.js';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Events } from '../db/index.js';
 import PropTypes from 'prop-types';
+import { eventPropTypes } from './types/eventPropTypes.js';
 
 class MainPage extends Component {
     constructor(props) {
@@ -28,6 +29,6 @@ export default withTracker(() => {
 })(MainPage);
 
 MainPage.propTypes = {
-    events: PropTypes.arrayOf(PropTypes.object).isRequired,
+    events: PropTypes.arrayOf(eventPropTypes).isRequired,
 };
 

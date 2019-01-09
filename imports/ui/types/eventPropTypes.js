@@ -1,6 +1,6 @@
 import { number, string, arrayOf, shape} from 'prop-types';
 
-export const eventsList = shape({
+export const eventPropTypes = shape({
     id: number.isRequired,
     name: string.isRequired,
     description: string.isRequired,

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { CardBody, Card } from 'reactstrap';
-import {eventsList} from './types/eventPropTypes.js';
+import {eventPropTypes} from './types/eventPropTypes.js';
 
 const Event = ({eventsList}) => {
     return (
@@ -16,7 +16,7 @@ const Event = ({eventsList}) => {
 };
 
 Event.propTypes = {
-    eventsList: eventsList.isRequired
+    eventsList: eventPropTypes.isRequired
     };
 
 export default Event;

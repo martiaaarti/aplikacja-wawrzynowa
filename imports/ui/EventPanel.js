@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Row, Col, Collapse, Button, CardBody, Card } from 'reactstrap';
 import Event from './Event.js';
+import { eventPropTypes } from './types/eventPropTypes.js';
 
 export default class EventPanel extends Component {
     constructor(props) {
@@ -23,16 +24,16 @@ export default class EventPanel extends Component {
     }
 
     render() {
-        const { eventType, id } = this.props
+        const { eventType } = this.props
 
         return (
             <Row>
                 <Col sm="12" md={{ size: 8, offset: 2 }}>
-                    <Card id={`${id}-event-panel`} className='my-2'>
+                    <Card id={`${eventType.id}-event-panel`} className='my-2'>
                         <CardBody className='p-3'>
                             <Button block color="secondary" size="lg" onClick={this.toggle} className='mb-2 text-left'>
                                 <FontAwesomeIcon icon={this.state.isMainCardOpen ? "caret-down" : "caret-right"} pull="left" size="lg" />
-                                {eventType}
+                                {eventType.title}
                             </Button>
                             <Collapse isOpen={this.state.isMainCardOpen}>
                                 {this.renderEvents()}
@@ -46,7 +47,6 @@ export default class EventPanel extends Component {
 }
 
 EventPanel.propTypes = {
-    id: PropTypes.number.isRequired,
-    eventType: PropTypes.string,
-    events: PropTypes.arrayOf(PropTypes.object).isRequired,
+    eventType: PropTypes.object.isRequired,    
+    events: PropTypes.arrayOf(eventPropTypes).isRequired,
 };
