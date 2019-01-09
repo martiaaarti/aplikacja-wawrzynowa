@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import { Route } from 'react-router-dom';
 
-import EventsView from './EventsView.js';
-import EventDescription from './EventDescription.js';
+import EventsView from './EventsMainView/EventsView.js';
+import EventDescription from './EventsDescriptionView/EventDescription.js';
 
 
 export default class MainPage extends Component {

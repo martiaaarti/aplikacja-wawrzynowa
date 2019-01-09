@@ -1,5 +1,6 @@
 /* CSS declarations go here */
 :root {
+  --main-font-color: rgba(0,0,0,.5);
   --main-fontawesome-color: rgba(0,0,0,.5);
 }
 
@@ -49,7 +50,7 @@ body {
 }
 
 p {
-  color: var(--main-fontawesome-color);
+  color: var(--main-font-color);
   display: flex;
   justify-content: center;
   align-items: center;
