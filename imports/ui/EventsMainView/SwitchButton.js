@@ -22,4 +22,4 @@ export default class SwitchButton extends Component {
 
 SwitchButton.propTypes = {
     onNavigate: PropTypes.func.isRequired
-}
+};

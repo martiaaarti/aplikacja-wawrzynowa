@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import EventsListView from './EventsListView.js';
 import EventsCalendarView from './EventsCalendarView.js';
@@ -27,18 +28,17 @@ export default class EventsView extends Component {
                 
                 <SwitchButton onNavigate={this.onNavigate} isCalendarSelected={this.state.isCalendarSelected} />
 
-                {this.state.isCalendarSelected === false && (
-                    <EventsListView />
-                )}
-                {this.state.isCalendarSelected === true && (
-                    <EventsCalendarView />
-                )}
+                {this.state.isCalendarSelected ? <EventsCalendarView /> : <EventsListView />}
 
             </div>
 
         )
     }
 }
+
+EventsView.propType = {
+    onNavigate: PropTypes.func.isRequired
+};
 
 
 

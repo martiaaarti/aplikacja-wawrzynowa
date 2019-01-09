@@ -15,12 +15,12 @@ export default class MainPage extends Component {
         return (
             <Container className="w-100 h-100">
                 <div>
-                    <Route exact path="/" render={() => (
-                        <EventsView/>
-                    )}/> 
+                    <Route exact path="/" component={EventsView}/> 
 
-                    <Route path="/description" render={() => (
-                        <EventDescription/>
+                    <Route path="/description/:eventId" render={(props) => (
+                    <EventDescription
+                    id={props.match.params.eventID}
+                    />
                     )}/>             
                 </div>            
             </Container>
