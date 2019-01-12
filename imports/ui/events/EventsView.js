@@ -26,8 +26,7 @@ export default class EventsView extends Component {
         return (
             <div>
                 
-                <SwitchButton onNavigate={this.onNavigate} isCalendarSelected={this.state.isCalendarSelected} />
-
+                <SwitchButton onNavigate={this.onNavigate} isCalendarSelected={this.state.isCalendarSelected}/>
                 {this.state.isCalendarSelected ? <EventsCalendarView /> : <EventsListView />}
 
             </div>

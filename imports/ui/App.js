@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'; 
 
 import Header from './Header.js';
 import MainPage from './MainPage.js';
@@ -17,7 +16,7 @@ export default class App extends Component {
         return (
             <div className="main-container">
                 <Header/>            
-                <MainPage/>
+                    <MainPage/>
                 <Footer/>
             </div>
         )

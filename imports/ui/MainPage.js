@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import { Route } from 'react-router-dom';
 
-import EventsView from './EventsMainView/EventsView.js';
-import EventDescription from './EventsDescriptionView/EventDescription.js';
+import EventsView from './events/EventsView.js';
+import EventDescription from './events/description/EventDescription.js';
 
 
 export default class MainPage extends Component {
@@ -16,12 +16,7 @@ export default class MainPage extends Component {
             <Container className="w-100 h-100">
                 <div>
                     <Route exact path="/" component={EventsView}/> 
-
-                    <Route path="/description/:eventId" render={(props) => (
-                    <EventDescription
-                    id={props.match.params.eventID}
-                    />
-                    )}/>             
+                    <Route path="/description/" component={EventDescription}/>             
                 </div>            
             </Container>
         )
