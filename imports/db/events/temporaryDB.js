@@ -1,7 +1,6 @@
-import { Meteor } from 'meteor/meteor';
 import { Events } from './collection';
 
-Meteor.startup(() => {
+export default testingEventsDB = () => {
     countEvents = Events.find().count();
 
     if (countEvents === 0) {
@@ -38,7 +37,6 @@ Meteor.startup(() => {
             startDateTime: '2018-12-18T06:00:00+02:00',
             duration: 2
         });
-
     }
-}); 
+};
     
