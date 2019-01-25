@@ -60,3 +60,7 @@ p {
 .description-back-icon, .facebook-icon, .youtube-icon {
   color: var(--main-fontawesome-color);
 }
+
+.description-title {
+  font-family: 'Major Mono Display', monospace;
+}
