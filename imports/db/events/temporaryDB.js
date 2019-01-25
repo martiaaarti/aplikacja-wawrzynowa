@@ -1,7 +1,7 @@
 import { Events } from './collection';
 
 export const testingEventsDB = () => {
-    countEvents = Events.find().count();
+    let countEvents = Events.find().count();
 
     if (countEvents === 0) {
         Events.insert({
