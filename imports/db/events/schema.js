@@ -2,6 +2,7 @@ import SimpleSchema from 'simpl-schema';
 
 export default new SimpleSchema({
 
+    id: { type: SimpleSchema.Integer },
     name: { type: String },
     description: { type: String },
     meetingPlace: { type: String },

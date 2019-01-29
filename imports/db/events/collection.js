@@ -1,10 +1,11 @@
 import { Mongo } from 'meteor/mongo';
 import eventSchema from './schema';
+import testingEventsDB from './temporaryDB.js'
 
 const Events = new Mongo.Collection('events');
 
 Events.attachSchema(eventSchema);
-Events.testingEventsDB;
+testingEventsDB(Events);
 
 export default Events;
 
