@@ -2,7 +2,7 @@ import SimpleSchema from 'simpl-schema';
 
 export default new SimpleSchema({
 
-    id: { type: SimpleSchema.Integer },
+    _id: { type: String },
     ownerId: { type: SimpleSchema.Integer },
     admins: { type: Array },
 
