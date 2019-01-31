@@ -8,7 +8,7 @@ export default new SimpleSchema({
     meetingPlace: { type: String },
 
     startDateTime: {
-        type: Date
+        type: String
     },
 
     duration: {
