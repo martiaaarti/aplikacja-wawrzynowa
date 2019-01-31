@@ -1,4 +1,4 @@
-import '../imports/db/events/collection';
-import '../imports/db/ministries/collection';
+import '../db/events/collection';
+import '../db/ministries/collection';
 
 

@@ -3,7 +3,7 @@ import { Container } from 'reactstrap';
 
 import EventsListView from './EventsListView.js';
 import { withTracker } from 'meteor/react-meteor-data';
-import { Events } from '../db/index.js';
+import { Events } from '/db/index.js';
 import PropTypes from 'prop-types';
 import { eventPropTypes } from './types/eventPropTypes.js';
 
