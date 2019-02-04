@@ -1,7 +1,5 @@
-import { Events } from './collection';
-
-export default testingEventsDB = () => {
-    countEvents = Events.find().count();
+export default insertTestEvents = (Events) => {
+    const countEvents = Events.find().count();
 
     if (countEvents === 0) {
         Events.insert({
