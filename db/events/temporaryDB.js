@@ -1,5 +1,6 @@
 export default insertTestEvents = (Events) => {
     const countEvents = Events.find().count();
+    console.log(countEvents);
 
     if (countEvents === 0) {
         Events.insert({

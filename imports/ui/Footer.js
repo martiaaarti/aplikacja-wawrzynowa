@@ -11,7 +11,7 @@ export default class Footer extends Component {
 
     render() {
         return (
-            <div className="main-footer navbar-fixed-bottom">
+            <div className="footer">
                 <Container>
                     <Row>
                         <Col sm="12" md="12" lg="12">

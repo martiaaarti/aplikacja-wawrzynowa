@@ -15,7 +15,7 @@ class MainPage extends Component {
     render() {
 
         return (
-            <Container className="w-100 h-100">
+            <Container className="w-100 h-95">
                 <EventsListView events={this.props.events} />
             </Container>
         )
