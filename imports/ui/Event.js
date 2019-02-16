@@ -8,7 +8,7 @@ const Event = ({eventsList}) => {
 
         <div className="py-1">
             <Card className="pt-0">
-                <CardBody className="py-2">{eventsList.name}</CardBody>
+                <CardBody className="py-2">{eventsList.name} | {eventsList.startDateTime}</CardBody>
             </Card>
         </div>
 

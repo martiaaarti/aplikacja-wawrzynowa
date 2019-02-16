@@ -1,6 +1,6 @@
 import { Mongo } from 'meteor/mongo';
 import eventSchema from './schema';
-import insertTestEvents from './temporaryDB';
+import insertTestEvents from './temporaryDB.js';
 
 const Events = new Mongo.Collection('events');
 
@@ -15,7 +15,8 @@ Events.allow({
     }
 });
 
-Events.remove({});
 insertTestEvents(Events);
+
+console.log(Events.find({}).count());
 
 export default Events;
