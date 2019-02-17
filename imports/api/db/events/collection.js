@@ -7,15 +7,17 @@ const Events = new Mongo.Collection('events');
 Events.attachSchema(eventSchema);
 
 Events.allow({
-    insert: function() {
+    insert: function () {
         return true;
     },
-    remove: function() {
+    remove: function () {
         return true;
     }
 });
 
-insertTestEvents(Events);
+if (Meteor.isServer) {
+    insertTestEvents(Events);
+}
 
 console.log(Events.find({}).count());
 
