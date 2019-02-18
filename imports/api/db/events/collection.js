@@ -19,6 +19,4 @@ if (Meteor.isServer) {
     insertTestEvents(Events);
 }
 
-console.log(Events.find({}).count());
-
 export default Events;
