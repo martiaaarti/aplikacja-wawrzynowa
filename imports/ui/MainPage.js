@@ -23,6 +23,8 @@ class MainPage extends Component {
 }
 
 export default withTracker(() => {
+    Meteor.subscribe('events');
+
     return {
         events: Events.find({}).fetch(),
     };

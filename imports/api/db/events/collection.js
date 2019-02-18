@@ -15,8 +15,13 @@ Events.allow({
     }
 });
 
+
 if (Meteor.isServer) {
+    Meteor.publish('events', function eventsPublication() {
+        return Events.find();
+    });
+
     insertTestEvents(Events);
-}
+};
 
 export default Events;
