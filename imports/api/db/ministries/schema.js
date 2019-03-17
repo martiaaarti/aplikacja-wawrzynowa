@@ -18,7 +18,7 @@ export default new SimpleSchema({
         type: Array
     },
     'volunteerEvents.$': {
-        type: Object
+        type: String
     },
 
     recurringEvents: {

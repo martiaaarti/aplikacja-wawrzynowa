@@ -1,6 +1,5 @@
 import { Mongo } from 'meteor/mongo';
 import eventSchema from './schema';
-import insertTestEvents from './temporaryDB.js';
 
 const Events = new Mongo.Collection('events');
 
@@ -20,8 +19,6 @@ if (Meteor.isServer) {
     Meteor.publish('events', function eventsPublication() {
         return Events.find();
     });
-
-    insertTestEvents(Events);
 };
 
 export default Events;

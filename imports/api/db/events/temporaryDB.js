@@ -1,4 +1,6 @@
-export default insertTestEvents = (Events) => {
+import { Events } from '../index';
+
+if (Meteor.isServer) {
     const countEvents = Events.find({}).count();
 
     if (countEvents == 0) {
@@ -8,7 +10,7 @@ export default insertTestEvents = (Events) => {
             meetingPlace: 'DA Antoni, w schronie po lewej stronie za kościołem',
             startDateTime: '2018-02-15',
             duration: 3,
-            attendeesLimit: 150       
+            attendeesLimit: 150
         });
         Events.insert({
             name: 'Spotkanie Redakcji "Wawrzyna"',
@@ -33,4 +35,4 @@ export default insertTestEvents = (Events) => {
         });
     }
 };
-    
+

@@ -1,4 +1,4 @@
-import { Events, Ministries } from '/imports/db';
+import { Events, Ministries } from '../index';
 
 Ministries.addLinks({
     volunteerEventsLink: {
