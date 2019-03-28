@@ -26,7 +26,7 @@ export default new SimpleSchema({
         optional: true
     },
     'recurringEvents.$': {
-        type: SimpleSchema.Integer
+        type: String
     },
 
     singleEvents: {
@@ -34,6 +34,6 @@ export default new SimpleSchema({
         optional: true
     },
     'singleEvents.$': {
-        type: SimpleSchema.Integer
+        type: String
     }
 });

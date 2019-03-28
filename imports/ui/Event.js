@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { CardBody, Card } from 'reactstrap';
 import {eventPropTypes} from './types/eventPropTypes.js';
 
