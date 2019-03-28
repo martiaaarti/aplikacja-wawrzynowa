@@ -22,16 +22,14 @@ export default new SimpleSchema({
     },
 
     recurringEvents: {
-        type: Array,
-        optional: true
+        type: Array
     },
     'recurringEvents.$': {
         type: String
     },
 
     singleEvents: {
-        type: Array,
-        optional: true
+        type: Array
     },
     'singleEvents.$': {
         type: String

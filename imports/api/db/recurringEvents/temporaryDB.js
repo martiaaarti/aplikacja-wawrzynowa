@@ -1,0 +1,26 @@
+import { RecurringEvents } from '../index';
+
+if (Meteor.isServer) {
+    const countRecurringEvents = RecurringEvents.find({}).count();
+
+    if (countRecurringEvents == 0) {
+        RecurringEvents.insert({
+            _id: 'recurring-events',
+            ownerId: 40,
+            admins: [],
+            mainEvents: [],
+            volunteersLimit: 150,
+            volunteers: []
+        });
+
+        const mainEventsLink = RecurringEvents.getLink('recurring-events', 'mainEventsLink');
+        mainEventsLink.set({
+            name: 'Poranne sióremki',
+            description: 'Zapraszamy na codzienna poranną Msze Świętą...',
+            meetingPlace: 'DA Wawrzyny, ul.Odona Bujwida Wrocław',
+            startDateTime: '2018-03-25',
+            duration: 1,
+            attendeesLimit: 150
+        });
+    }
+}

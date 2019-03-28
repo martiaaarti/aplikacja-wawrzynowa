@@ -11,7 +11,9 @@ if (Meteor.isServer) {
             name: 'Ministerstwo Nauki',
             description: 'To jest opis',
             color: 'blue',
-            volunteerEvents: []
+            volunteerEvents: [],
+            recurringEvents: [],
+            singleEvents: []
         });
 
         const volunteerEventsLink = Ministries.getLink('ministerstwo_nauki', 'volunteerEventsLink');
