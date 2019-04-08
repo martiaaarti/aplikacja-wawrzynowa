@@ -25,5 +25,25 @@ if (Meteor.isServer) {
             duration: 3,
             attendeesLimit: 1
         });
+
+        const recurringEventsLink = Ministries.getLink('ministerstwo_nauki', 'recurringEventsLink');
+        recurringEventsLink.add({
+            _id: 'recurring-events',
+            ownerId: 40,
+            admins: [],
+            mainEvents: [],
+            volunteersLimit: 150,
+            volunteers: []
+        });
+
+        const singleEventsLink = Ministries.getLink('ministerstwo_nauki', 'singleEventsLink');
+        singleEventsLink.add({
+            _id: 'single-events',
+            ownerId: 20,
+            admins: [],
+            mainEvent: [],
+            volunteersLimit: 150,
+            volunteers: []
+        });
     };
 }

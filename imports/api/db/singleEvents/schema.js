@@ -10,7 +10,7 @@ export default new SimpleSchema({
     },
 
     mainEvent: {
-        type: Array,
+        type: Array
     },
     'mainEvent.$': {
         type: String

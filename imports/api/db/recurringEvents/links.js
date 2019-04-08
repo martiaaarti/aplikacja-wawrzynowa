@@ -9,7 +9,7 @@ RecurringEvents.addLinks({
 
 RecurringEvents.addLinks({
     mainEventsLink: {
-        type: 'one',
+        type: 'many',
         collection: Events,
         field: 'mainEvents'
     }
